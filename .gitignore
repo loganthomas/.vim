@@ -1,0 +1,6 @@
+# Ignore file change history and swap files
+*.netrwhist
+*~$
+
+# Ignore spell file (for spell checking)
+spell/

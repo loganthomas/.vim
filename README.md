@@ -6,8 +6,32 @@ This is my personal vim set up
 >> [Indent-Python](https://github.com/tsanch3z/indent-python.vim)  
 
 To port:  
-Clone repo  
-`git clone https://github.com/loganthomas/.vim.git`  
+1. If .vim dir already exists, check to see if any relevant file need to be copied.  
+   If so, copy file(s) into home dir  
+   `cp ~/.vim/spell ~/spell -r`  
 
-Create symbolic link (like shortcut) in home directory  
-`ln -s ~/.vim/vimrc ~/.vimrc`  
+2. Remove existing .vim dir **AFTER** relevant files have been copied  
+    `rm .vim --recursive`
+
+3. Remove .vimrc if it exists  
+    `rm .vimrc`  
+
+4. Clone repo  
+    `git clone https://github.com/loganthomas/.vim.git`  
+
+5. Create symbolic link (like shortcut) in home directory  
+    `ln -s ~/.vim/vimrc ~/.vimrc`  
+
+6. If previous relevant files were copied, move them into new (cloned) .vim dir  
+    `mv ~/spell ~/.vim/spell` 
+
+7. Make autoload dir within .vim dir
+    `mkdir ~/.vim/autoload`
+
+8. Install Vim-Plug  
+    `curl -fLo ~/.vim/autoload/plug.vim --create-dirs \  
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+
+9. Install plug-ins  
+    `vim`  
+    `:PlugInstall`

@@ -2,5 +2,9 @@
 *.netrwhist
 *~$
 
-# Ignore spell file (for spell checking)
+# Ignore spell dir (for spell checking)
 spell/
+
+# Ignore plugged dir (plug-ins)
+# Need to install once cloned
+plugged/

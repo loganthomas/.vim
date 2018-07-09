@@ -25,13 +25,6 @@ To port:
 6. If previous relevant files were copied, move them into new (cloned) .vim dir  
     `mv ~/spell ~/.vim/spell` 
 
-7. Make autoload dir within .vim dir
-    `mkdir ~/.vim/autoload`
-
-8. Install Vim-Plug  
-    `curl -fLo ~/.vim/autoload/plug.vim --create-dirs \  
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
-
-9. Install plug-ins  
+7. Install plug-ins  
     `vim`  
     `:PlugInstall`

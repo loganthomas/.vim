@@ -1,9 +1,10 @@
 " Set Vim settings
 "------------------------------------------------------------------------------
-colorscheme ron                 " Set colorscheme
+"colorscheme ron                 " Set colorscheme
+colorscheme monokai
 set nocompatible                " Don't use Vi-compatible
 set clipboard=unnamed           " Copy/paste to work properly
-set background=dark             " Use colors that work well with dark screen
+"set background=dark             " Use colors that work well with dark screen
 set backspace=indent,eol,start  " Make backspace work correctly (over indents, line breaks, starts)
 set encoding=utf-8              " Sets character encoding to UTF-8
 set mouse=a                     " Enable mouse for Normal, Visual, Insert, CMD modes

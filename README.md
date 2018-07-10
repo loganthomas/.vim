@@ -1,5 +1,5 @@
 This is my personal vim set up
-> Version Control & Portability
+> Version Control & Portability  
 > Plug in manager --> [Vim Plug](https://github.com/junegunn/vim-plug)  
 >> [NERDTree](https://github.com/scrooloose/nerdtree)  
 >> [Vim-Signify](https://github.com/mhinz/vim-signify)  

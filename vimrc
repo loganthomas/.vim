@@ -128,6 +128,7 @@ call plug#end()
 
 " Map nerd tree to cntrl+n (pressing control+n opens nerd tree)
 :map <C-n> :NERDTree<CR>
+let NERDTreeShowHidden=1
 
 " Specific for vim-signify
 let g:signify_vcs_list = ['git']

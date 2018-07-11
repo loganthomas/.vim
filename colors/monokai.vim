@@ -25,13 +25,13 @@ set t_Co=256
 let g:colors_name="monokai"
 
 let purple            = { "gui": "#5f5fff", "cterm": "63"}
-let yellow            = { "gui": "#d7af00", "cterm": "178"}
+let yellow            = { "gui": "#d7d75f", "cterm": "185"}
 let orange            = { "gui": "#af8700", "cterm": "136"}
 let lightPurple       = { "gui": "#af5fff", "cterm": "135"}
-let lightBlue         = { "gui": "#87d7ff", "cterm": "117"}
-let pink              = { "gui": "#d7005f", "cterm": "161"}
+let lightBlue         = { "gui": "#5fd7ff", "cterm": "81"}
+let pink              = { "gui": "#ff005f", "cterm": "197"}
 let darkRed           = { "gui": "#af00ff", "cterm": "129"}
-let green             = { "gui": "#00af00", "cterm": "34"}
+let green             = { "gui": "#87d700", "cterm": "112"}
 
 let seaGreen          = { "gui": "#00875f", "cterm": "29"}
 let darkYellow        = { "gui": "#00afd7", "cterm": "38"}
@@ -115,7 +115,7 @@ call s:HL('PmenuThumb', lightGrey, {}, 'NONE')
 call s:HL('PreCondit', lightGreen, {}, 'bold')
 call s:HL('PreProc', pink, {}, 'NONE')
 call s:HL('Question', lightBlue, {}, 'NONE')
-call s:HL('Repeat', pink, {}, 'bold')
+call s:HL('Repeat', pink, {}, 'NONE')
 
 call s:HL('IndentGuides', {}, darkGrey, 'NONE')
 call s:HL('SignColumn', lightGreen, defaultBackground, 'NONE')

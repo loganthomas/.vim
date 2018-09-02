@@ -1,10 +1,13 @@
-This is my personal vim set up
-> Version Control & Portability  
+This is my personal vim set up. I'm using GitHub for version control & portability.  
+
+# Vim Plug Ins:  
 > Plug in manager --> [Vim Plug](https://github.com/junegunn/vim-plug)  
->> [NERDTree](https://github.com/scrooloose/nerdtree)  
->> [Vim-Signify](https://github.com/mhinz/vim-signify)  
->> [Vim-Better-Whitespace](https://github.com/ntpeters/vim-better-whitespace)  
->> [Indent-Python](https://github.com/tsanch3z/indent-python.vim)  
+> File browsing --> [NERDTree](https://github.com/scrooloose/nerdtree)  
+> Git gutter --> [Vim-Signify](https://github.com/mhinz/vim-signify)  
+> Whitespace stripping --> [Vim-Better-Whitespace](https://github.com/ntpeters/vim-better-whitespace)  
+> Better indents for parentheses/brackets -->  [Indent-Python](https://github.com/tsanch3z/indent-python.vim)  
+> Code linting --> [Syntastic](https://github.com/vim-syntastic/syntastic)
+
 
 To port:  
 1. If .vim dir already exists, check to see if any relevant file need to be copied.  

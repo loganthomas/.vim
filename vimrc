@@ -142,7 +142,7 @@ let g:signify_update_onfocusgained = 1
 highlight SignifySignAdd    cterm=bold ctermbg=none ctermfg=green
 highlight SignifySignDelete cterm=bold ctermbg=none ctermfg=red
 highlight SignifySignChange cterm=bold ctermbg=none ctermfg=white
-set updatetime=2000
+set updatetime=3000
 
 " Specific for white-space
 let g:strip_whitespace_on_save = 1

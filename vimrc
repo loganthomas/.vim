@@ -123,6 +123,7 @@ call plug#begin()
     Plug 'mhinz/vim-signify'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'tsanch3z/indent-python.vim'
+    Plug 'scrooloose/syntastic'
 
 call plug#end()
 
@@ -145,4 +146,12 @@ set updatetime=2000
 
 " Specific for white-space
 let g:strip_whitespace_on_save = 1
+
+" Specific for syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_style_error_symbol = ">>"
+let g:syntastic_style_warning_symbol = ">>"
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args = '--ignore=E501,E309,E231,E201,E202,E221,E203,E271,E272,E241,E251,W391'
 "------------------------------------------------------------------------------

@@ -34,7 +34,7 @@ This is my personal vim set up. I'm using GitHub for version control & portabili
     `:PlugInstall`  
 
 ## Updating (no need to port again):  
-1. Once .vim has been ported (following above), no need to recreate link.  
+1. Once .vim has been ported (following above), no need to re-create symbolic link.  
    Pulling from repo will include updates.  
 
 2. Simply pull from repo (within cloned repo in env to update)  

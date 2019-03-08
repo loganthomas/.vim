@@ -6,7 +6,7 @@ This is my personal vim set up. I'm using GitHub for version control & portabili
 > Git gutter --> [Vim-Signify](https://github.com/mhinz/vim-signify)  
 > Whitespace stripping --> [Vim-Better-Whitespace](https://github.com/ntpeters/vim-better-whitespace)  
 > Better indents for parentheses/brackets -->  [Indent-Python](https://github.com/tsanch3z/indent-python.vim)  
-> Code linting --> [Syntastic](https://github.com/vim-syntastic/syntastic)
+> Code linting --> [Syntastic](https://github.com/vim-syntastic/syntastic)  
 > YAML syntax --> [vim-yaml](https://github.com/stephpy/vim-yaml/tree/master/after/ftplugin)
 
 ## To Port (first time in new env):  

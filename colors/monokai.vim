@@ -62,7 +62,7 @@ call s:HL('Search', darkGrey, white, 'NONE')
 call s:HL('IncSearch', darkGrey, white, 'NONE')
 
 call s:HL('Boolean', lightPurple, {}, 'NONE')
-call s:HL('Comment', grey, {}, 'NONE')
+call s:HL('Comment', lightGrey, {}, 'NONE')
 call s:HL('Character', tan, {}, 'NONE')
 call s:HL('Number', lightPurple, {}, 'NONE')
 call s:HL('String', yellow, {}, 'NONE')

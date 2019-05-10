@@ -104,7 +104,7 @@ if has("autocmd")
         \ set shiftwidth=4 |
         \ set expandtab |
         \ set autoindent |
-        \ set formatoptions-=cro
+        \ set formatoptions-=cro  " don't continue comment after ENTER
 endif
 
 

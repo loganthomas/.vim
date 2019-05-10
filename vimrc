@@ -166,4 +166,5 @@ let g:syntastic_python_flake8_args = '--ignore=E501,E309,E231,E201,E202,E221,E20
 
 " Specific for markdown preview (previm)
 let g:previm_open_cmd = 'open -a Google\ Chrome'
+let g:previm_enable_realtime = 1
 "------------------------------------------------------------------------------

@@ -88,6 +88,13 @@ if has("autocmd")
 endif
 
 
+" For making .md files read as markdown
+if has ("autocmd")
+    au BufNewFile,BufFilePre,BufRead *.py
+    \ set filetype=markdown
+endif
+
+
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
    "Set UTF-8 as the default encoding for commit messages
@@ -125,6 +132,7 @@ call plug#begin()
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'tsanch3z/indent-python.vim'
     Plug 'scrooloose/syntastic'
+    Plug 'kannokanno/previm'
 
 call plug#end()
 
@@ -155,4 +163,8 @@ let g:syntastic_style_error_symbol = ">>"
 let g:syntastic_style_warning_symbol = ">>"
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args = '--ignore=E501,E309,E231,E201,E202,E221,E203,E271,E272,E241,E251,W391'
+
+" Specific for markdown preview (previm)
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+let g:previm_enable_realtime = 1
 "------------------------------------------------------------------------------

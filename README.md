@@ -1,13 +1,17 @@
 This is my personal vim set up. I'm using GitHub for version control & portability.  
 
-# Vim Plug Ins:  
-> Plug in manager --> [Vim Plug](https://github.com/junegunn/vim-plug)  
-> File browsing --> [NERDTree](https://github.com/scrooloose/nerdtree)  
-> Git gutter --> [Vim-Signify](https://github.com/mhinz/vim-signify)  
-> Whitespace stripping --> [Vim-Better-Whitespace](https://github.com/ntpeters/vim-better-whitespace)  
-> Better indents for parentheses/brackets -->  [Indent-Python](https://github.com/tsanch3z/indent-python.vim)  
-> Code linting --> [Syntastic](https://github.com/vim-syntastic/syntastic)  
-> YAML syntax --> [vim-yaml](https://github.com/stephpy/vim-yaml)
+# Vim Plug Ins:
+| Description                             | Name (Link to GitHub)                                                      |
+|-----------------------------------------|----------------------------------------------------------------------------|
+| Plug in manager                         | [Vim Plug](https://github.com/junegunn/vim-plug)                           |
+| File browsing                           | [NERDTree](https://github.com/scrooloose/nerdtree)                         |
+| Git gutter                              | [Vim-Signify](https://github.com/mhinz/vim-signify)                        |
+| Whitespace stripping                    | [Vim-Better-Whitespace](https://github.com/ntpeters/vim-better-whitespace) |
+| Better indents for parentheses/brackets | [Indent-Python](https://github.com/tsanch3z/indent-python.vim)             |
+| Code linting                            | [Syntastic](https://github.com/vim-syntastic/syntastic)                    |
+| YAML syntax                             | [vim-yaml](https://github.com/stephpy/vim-yaml)                            |
+| Previewing Markdown in browser          | [previm](https://github.com/previm/previm/blob/master/README-en.mkd)       |
+
 
 ## To Port (first time in new env):  
 1. If .vim dir already exists, check to see if any relevant file need to be copied.  
@@ -51,3 +55,9 @@ This is my personal vim set up. I'm using GitHub for version control & portabili
 5. If new vim plug ins require a python package, must install it  
    (For example, syntastic requires flake8 python package)  
    `pip insall flake8` OR `pip install flake8 --user`  
+
+
+## Plugin Reminders
+### **Previm**
+- Use `:PrevimOpen` to open `.md` file in browser for preview
+- Use `:help g:previm_open_cmd` for man page

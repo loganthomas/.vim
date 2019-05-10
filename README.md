@@ -61,3 +61,10 @@ This is my personal vim set up. I'm using GitHub for version control & portabili
 ### **Previm**
 - Use `:PrevimOpen` to open `.md` file in browser for preview
 - Use `:help g:previm_open_cmd` for man page
+    ```
+    # Windows
+    let g:previm_open_cmd = 'start chrome'
+
+    # Mac
+    let g:previm_open_cmd = 'open -a Google\ Chrome'
+    ```

@@ -90,8 +90,8 @@ endif
 
 " For making .md files read as markdown
 if has ("autocmd")
-    au BufNewFile,BufFilePre,BufRead *.py
-    \ set filetype=markdown
+    au BufNewFile,BufFilePre,BufRead *.md
+        \ set filetype=markdown
 endif
 
 

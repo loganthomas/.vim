@@ -40,9 +40,9 @@ if has("autocmd")
 endif
 
 " Load indentation rules and plugins according to the detected filetype
-if has("autocmd")
-    filetype plugin indent on
-endif
+"if has("autocmd")
+"    filetype plugin indent on
+"endif
 
 
 "When a .py file is read or the line text changes in normal or insert mode,
@@ -92,6 +92,19 @@ endif
 if has ("autocmd")
     au BufNewFile,BufFilePre,BufRead *.md
         \ set filetype=markdown
+endif
+
+
+" For YAML files
+if has("autocmd")
+    au BufNewFile,BufRead *.{yaml,yml}
+        \ set filetype=yaml |
+        \ set tabstop=4 |
+        \ set softtabstop=4 |
+        \ set shiftwidth=4 |
+        \ set expandtab |
+        \ set autoindent |
+        \ set formatoptions-=cro
 endif
 
 

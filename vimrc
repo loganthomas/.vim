@@ -146,6 +146,7 @@ call plug#begin()
     Plug 'tsanch3z/indent-python.vim'
     Plug 'scrooloose/syntastic'
     Plug 'kannokanno/previm'
+    Plug 'tpope/vim-commentary'
 
 call plug#end()
 

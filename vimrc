@@ -167,17 +167,17 @@ highlight SignifySignChange cterm=bold ctermbg=none ctermfg=white
 set updatetime=3500
 
 " Specific for white-space
-let g:strip_whitespace_on_save = 1
+let g:strip_whitespace_on_save=1
 
 " Specific for syntastic
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_style_error_symbol = ">>"
-let g:syntastic_style_warning_symbol = ">>"
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = '--ignore=E501,E309,E231,E201,E202,E221,E203,E271,E272,E241,E251,W391'
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_style_error_symbol=">>"
+let g:syntastic_style_warning_symbol=">>"
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args='--ignore=E501,E309,E231,E201,E202,E221,E203,E271,E272,E241,E251,W391'
 
 " Specific for markdown preview (previm)
-let g:previm_open_cmd = 'open -a Google\ Chrome'
-let g:previm_enable_realtime = 1
+let g:previm_open_cmd='open -a Google\ Chrome'
+let g:previm_enable_realtime=1
 "------------------------------------------------------------------------------

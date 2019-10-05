@@ -147,6 +147,7 @@ call plug#begin()
     Plug 'scrooloose/syntastic'
     Plug 'kannokanno/previm'
     Plug 'tpope/vim-commentary'
+    Plug 'godlygeek/tabular'
 
 call plug#end()
 

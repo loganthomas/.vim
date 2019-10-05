@@ -1,16 +1,17 @@
 This is my personal vim set up. I'm using GitHub for version control & portability.  
 
 # Vim Plug Ins:
-| Description                             | Name (Link to GitHub)                                                      |
-|-----------------------------------------|----------------------------------------------------------------------------|
-| Plug in manager                         | [Vim Plug](https://github.com/junegunn/vim-plug)                           |
-| File browsing                           | [NERDTree](https://github.com/scrooloose/nerdtree)                         |
-| Git gutter                              | [Vim-Signify](https://github.com/mhinz/vim-signify)                        |
-| Whitespace stripping                    | [Vim-Better-Whitespace](https://github.com/ntpeters/vim-better-whitespace) |
-| Better indents for parentheses/brackets | [Indent-Python](https://github.com/tsanch3z/indent-python.vim)             |
-| Code linting                            | [Syntastic](https://github.com/vim-syntastic/syntastic)                    |
-| Previewing Markdown in browser          | [previm](https://github.com/previm/previm/blob/master/README-en.mkd)       |
-
+| Description                               | Name (Link to GitHub)                                                        |
+| ----------------------------------------- | ---------------------------------------------------------------------------- |
+| Plug in manager                           | [Vim Plug](https://github.com/junegunn/vim-plug)                             |
+| File browsing                             | [NERDTree](https://github.com/scrooloose/nerdtree)                           |
+| Git gutter                                | [Vim-Signify](https://github.com/mhinz/vim-signify)                          |
+| Whitespace stripping                      | [Vim-Better-Whitespace](https://github.com/ntpeters/vim-better-whitespace)   |
+| Better indents for parentheses/brackets   | [Indent-Python](https://github.com/tsanch3z/indent-python.vim)               |
+| Code linting                              | [Syntastic](https://github.com/vim-syntastic/syntastic)                      |
+| Previewing Markdown in browser            | [previm](https://github.com/previm/previm/blob/master/README-en.mkd)         |
+| Vim Commentary                            | [vim-commentary](https://github.com/tpope/vim-commentary)                    |
+| Tabular                                   | [tabular](https://github.com/godlygeek/tabular)                              |
 
 ## To Port (first time in new env):  
 1. If .vim dir already exists, check to see if any relevant file need to be copied.  

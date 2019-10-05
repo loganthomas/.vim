@@ -167,7 +167,9 @@ highlight SignifySignChange cterm=bold ctermbg=none ctermfg=white
 set updatetime=3500
 
 " Specific for white-space
+let g:strip_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm=0
 
 " Specific for syntastic
 let g:syntastic_check_on_open=1

@@ -148,6 +148,8 @@ call plug#begin()
     Plug 'kannokanno/previm'
     Plug 'tpope/vim-commentary'
     Plug 'godlygeek/tabular'
+    Plug 'itchyny/lightline.vim'
+    Plug 'itchyny/vim-gitbranch'
 
 call plug#end()
 
@@ -185,4 +187,18 @@ let g:syntastic_python_flake8_args='--ignore=E501,E309,E231,E201,E202,E221,E203,
 let g:previm_open_cmd='open -a Google\ Chrome'
 " let g:previm_open_cmd='start chrome'
 " let g:previm_enable_realtime=1
+
+" Specific for lightline (uses vim-gitbranch)
+set laststatus=2
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
 "------------------------------------------------------------------------------

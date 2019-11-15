@@ -89,7 +89,7 @@ endif
 
 
 " For making .md files read as markdown
-if has ("autocmd")
+if has("autocmd")
     au BufNewFile,BufFilePre,BufRead *.md
         \ set filetype=markdown
 endif
@@ -176,12 +176,22 @@ let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm=0
 
 " Specific for syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_style_error_symbol=">>"
 let g:syntastic_style_warning_symbol=">>"
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--ignore=E501,E309,E231,E201,E202,E221,E203,E271,E272,E241,E251,W391'
+
+" Sometimes in virtual env loading these filetypes is too slow
+let g:syntastic_mode_map={
+      \ "mode": "active",
+      \ "passive_filetypes": ["markdown", "yaml", "json", "tcl"] }
 
 " Specific for markdown preview (previm)
 let g:previm_open_cmd='open -a Google\ Chrome'

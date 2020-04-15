@@ -8,7 +8,7 @@ This is my personal vim set up. I'm using GitHub for version control & portabili
 | Git gutter                                | [Vim-Signify](https://github.com/mhinz/vim-signify)                          |
 | Whitespace stripping                      | [Vim-Better-Whitespace](https://github.com/ntpeters/vim-better-whitespace)   |
 | Better indents for parentheses/brackets   | [Indent-Python](https://github.com/tsanch3z/indent-python.vim)               |
-| Code linting                              | [Syntastic](https://github.com/vim-syntastic/syntastic)                      |
+| Code linting                              | [Ale](https://github.com/dense-analysis/ale)                                 |
 | Previewing Markdown in browser            | [previm](https://github.com/previm/previm/blob/master/README-en.mkd)         |
 | Easy commenting/uncommenting              | [vim-commentary](https://github.com/tpope/vim-commentary)                    |
 | Aligning text, tables, values, etc.       | [tabular](https://github.com/godlygeek/tabular)                              |
@@ -37,7 +37,11 @@ This is my personal vim set up. I'm using GitHub for version control & portabili
 
 7. Install plug-ins  
     `vim`  
-    `:PlugInstall`  
+    `:PlugInstall` 
+    
+8. Cleanup plug-ins (delete unused plug-ins)  
+    `vim`  
+    `:PlugClean`  
 
 ## Updating (no need to port again):  
 1. Once .vim has been ported (following above), no need to re-create symbolic link.  

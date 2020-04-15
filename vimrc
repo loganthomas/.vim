@@ -54,15 +54,20 @@ augroup END
 
 "Color the column marking the length limit when the longest line in the file
 "exceeds the length limit
-function! ShowColumnIfLineTooLong(lengthLimit)
-    let maxLineLength = max(map(getline(1, '$'), 'len(v:val)'))
+" function! ShowColumnIfLineTooLong(lengthLimit)
+"     let maxLineLength = max(map(getline(1, '$'), 'len(v:val)'))
 
-    if maxLineLength > a:lengthLimit
-        highlight ColorColumn ctermbg=red guibg=red
-        execute "set colorcolumn=" . (a:lengthLimit+1)
-    else
-        set colorcolumn=""
-    endif
+"     if maxLineLength > a:lengthLimit
+"         highlight ColorColumn ctermbg=red guibg=red
+"         execute "set colorcolumn=" . (a:lengthLimit+1)
+"     else
+"         set colorcolumn=""
+"     endif
+" endfunction
+
+function! ShowColumnIfLineTooLong(lengthLimit)
+	highlight ColorColumn ctermbg=234 guibg=#272822
+	let &colorcolumn="72,".join([a:lengthLimit])
 endfunction
 
 
@@ -144,12 +149,13 @@ call plug#begin()
     Plug 'mhinz/vim-signify'
     Plug 'ntpeters/vim-better-whitespace'
     Plug 'tsanch3z/indent-python.vim'
-    Plug 'scrooloose/syntastic'
+    " Plug 'scrooloose/syntastic'
     Plug 'kannokanno/previm'
     Plug 'tpope/vim-commentary'
     Plug 'godlygeek/tabular'
     Plug 'itchyny/lightline.vim'
     Plug 'itchyny/vim-gitbranch'
+    Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -175,23 +181,34 @@ let g:strip_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 let g:strip_whitespace_confirm=0
 
+" Specific for ale
+" Note on using flake8
+"     pip show flake8
+"     cd to the dir where flake8 is located
+"     find defaults.py
+"     add to IGNORE section
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_linters = {'python': ['flake8'],}
+
+
 " Specific for syntastic
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 " let g:syntastic_always_populate_loc_list=1
 " let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_style_error_symbol=">>"
-let g:syntastic_style_warning_symbol=">>"
-let g:syntastic_python_checkers=['flake8']
-let g:syntastic_python_flake8_args='--ignore=E501,E309,E231,E201,E202,E221,E203,E271,E272,E241,E251,W391'
+" let g:syntastic_check_on_open=1
+" let g:syntastic_check_on_wq=0
+" let g:syntastic_style_error_symbol=">>"
+" let g:syntastic_style_warning_symbol=">>"
+" let g:syntastic_python_checkers=['flake8']
+" let g:syntastic_python_flake8_args='--ignore=E501,E309,E231,E201,E202,E221,E203,E271,E272,E241,E251,W391'
 
 " Sometimes in virtual env loading these filetypes is too slow
-let g:syntastic_mode_map={
-      \ "mode": "active",
-      \ "passive_filetypes": ["markdown", "yaml", "json", "tcl"] }
+" let g:syntastic_mode_map={
+"       \ "mode": "active",
+"       \ "passive_filetypes": ["markdown", "yaml", "json", "tcl"] }
 
 " Specific for markdown preview (previm)
 let g:previm_open_cmd='open -a Google\ Chrome'

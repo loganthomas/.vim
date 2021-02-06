@@ -1,7 +1,8 @@
 " Set Vim settings
 "------------------------------------------------------------------------------
 "colorscheme ron                 " Set colorscheme
-colorscheme monokai
+" colorscheme monokai
+colorscheme onehalfdark
 set nocompatible                " Don't use Vi-compatible
 set clipboard=unnamed           " Copy/paste to work properly
 "set background=dark             " Use colors that work well with dark screen
@@ -156,6 +157,7 @@ call plug#begin()
     Plug 'itchyny/lightline.vim'
     Plug 'itchyny/vim-gitbranch'
     Plug 'dense-analysis/ale'
+    Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
 
@@ -218,8 +220,10 @@ let g:previm_open_cmd='open -a Google\ Chrome'
 " Specific for lightline (uses vim-gitbranch)
 set laststatus=2
 set noshowmode
+
+" \ 'colorscheme': 'one',
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'onehalfdark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]

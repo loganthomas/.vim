@@ -14,6 +14,8 @@ This is my personal vim set up. I'm using GitHub for version control & portabili
 | Aligning text, tables, values, etc.       | [tabular](https://github.com/godlygeek/tabular)                              |
 | Better status line at bottom of screen    | [lightline.vim](https://github.com/itchyny/lightline.vim)                    |
 | Function that returns name of git branch  | [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)                    |
+| Color Scheme                              | [onehalf](https://github.com/sonph/onehalf)                                  |
+
 
 ## To Port (first time in new env):  
 1. If .vim dir already exists, check to see if any relevant file need to be copied.  

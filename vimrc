@@ -35,6 +35,10 @@ if has("syntax")
 endif
 
 
+" Underline misspellings
+hi clear SpellBad
+hi SpellBad cterm=underline
+
 " Jump to last position when reopening file
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

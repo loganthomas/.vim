@@ -158,6 +158,7 @@ call plug#begin()
     Plug 'itchyny/vim-gitbranch'
     Plug 'dense-analysis/ale'
     Plug 'sonph/onehalf', { 'rtp': 'vim' }
+    Plug 'vim-python/python-syntax'
 
 call plug#end()
 
@@ -220,6 +221,9 @@ let g:previm_open_cmd='open -a Google\ Chrome'
 " Specific for lightline (uses vim-gitbranch)
 set laststatus=2
 set noshowmode
+
+" Specific for python-syntax
+let g:python_highlight_all=1
 
 " \ 'colorscheme': 'one',
 let g:lightline = {

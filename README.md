@@ -15,6 +15,7 @@ This is my personal vim set up. I'm using GitHub for version control & portabili
 | Better status line at bottom of screen    | [lightline.vim](https://github.com/itchyny/lightline.vim)                    |
 | Function that returns name of git branch  | [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)                    |
 | Color Scheme                              | [onehalf](https://github.com/sonph/onehalf)                                  |
+| Python Syntax Highlighting                | [python-syntax](https://github.com/vim-python/python-syntax)                 |
 
 
 ## To Port (first time in new env):  

@@ -13,6 +13,7 @@ set nowrap                      " Don't wrap lines
 set noerrorbells                " No sounds on errors
 set novisualbell                " No blinking on errors
 set number                      " Show line numbers
+set relativenumber              " Show line numbers in relation to current line
 set ruler                       " Show line and column number of cursor
 set showmatch                   " Show matching brackets
 set showmode                    " Show if in Insert, Replace, Visual mode

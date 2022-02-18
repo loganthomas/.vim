@@ -1,8 +1,9 @@
-" Set Vim settings
+"Set Vim settings
 "------------------------------------------------------------------------------
 "colorscheme ron                 " Set colorscheme
-" colorscheme monokai
+"colorscheme monokai
 colorscheme onehalfdark
+"colorscheme onehalflight
 set nocompatible                " Don't use Vi-compatible
 set clipboard=unnamed           " Copy/paste to work properly
 "set background=dark             " Use colors that work well with dark screen
@@ -34,7 +35,6 @@ nnoremap <C-h> <C-W><C-H>  " Control H moves left a screen
 if has("syntax")
     syntax on
 endif
-
 
 " Underline misspellings
 hi clear SpellBad
@@ -72,8 +72,8 @@ augroup END
 " endfunction
 
 function! ShowColumnIfLineTooLong(lengthLimit)
-	highlight ColorColumn ctermbg=234 guibg=#272822
-	let &colorcolumn="72,".join([a:lengthLimit])
+    highlight ColorColumn ctermbg=234 guibg=#272822
+    let &colorcolumn="72,".join([a:lengthLimit])
 endfunction
 
 
@@ -164,6 +164,7 @@ call plug#begin()
     Plug 'dense-analysis/ale'
     Plug 'sonph/onehalf', { 'rtp': 'vim' }
     Plug 'vim-python/python-syntax'
+    Plug 'maximbaz/lightline-ale'
 
 call plug#end()
 
@@ -195,10 +196,12 @@ let g:strip_whitespace_confirm=0
 "     cd to the dir where flake8 is located
 "     find defaults.py
 "     add to IGNORE section
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
+" Base EDM environment used for flake8 as no true Python on enthought macbook
+" let g:ale_python_flake8_executable='/Users/lthomas/venvs/non-edm/bin/flake8'
+" let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_on_insert_leave = 0
 let g:ale_linters = {'python': ['flake8'],}
-
+let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 
 " Specific for syntastic
 " set statusline+=%#warningmsg#
@@ -223,22 +226,41 @@ let g:previm_open_cmd='open -a Google\ Chrome'
 " let g:previm_open_cmd='start chrome'
 " let g:previm_enable_realtime=1
 
+" Specific to python-syntax
+let g:python_highlight_all=1
 " Specific for lightline (uses vim-gitbranch)
 set laststatus=2
 set noshowmode
-
-" Specific for python-syntax
-let g:python_highlight_all=1
-
-" \ 'colorscheme': 'one',
 let g:lightline = {
       \ 'colorscheme': 'onehalfdark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ],
+      \            [ 'lineinfo' ],
+      \            [ 'percent' ],
+      \            [ 'fileformat', 'fileencoding', 'filetype'] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'gitbranch#name'
       \ },
       \ }
-"------------------------------------------------------------------------------
+
+" Specific for lightline-ale
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_infos': 'lightline#ale#infos',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+
+let g:lightline.component_type = {
+      \     'linter_checking': 'right',
+      \     'linter_infos': 'right',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'right',
+      \ }
+
+"-------------------------

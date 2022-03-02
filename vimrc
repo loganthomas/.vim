@@ -200,7 +200,7 @@ let g:strip_whitespace_confirm=0
 " let g:ale_python_flake8_executable='/Users/lthomas/venvs/non-edm/bin/flake8'
 " let g:ale_lint_on_text_changed = 'never'
 " let g:ale_lint_on_insert_leave = 0
-let g:ale_linters = {'python': ['flake8'],}
+let g:ale_linters = {'python': ['flake8', 'mypy'],}
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 
 " Specific for syntastic

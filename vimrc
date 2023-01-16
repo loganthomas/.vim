@@ -202,6 +202,7 @@ let g:strip_whitespace_confirm=0
 " let g:ale_lint_on_insert_leave = 0
 let g:ale_linters = {'python': ['flake8', 'mypy'],}
 let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+let g:ale_virtualtext_cursor = 0
 
 " Specific for syntastic
 " set statusline+=%#warningmsg#
